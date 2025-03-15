@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Section */
+.wiki-search-header {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.wiki-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+#clearButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #888;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#clearButton:hover {
+    color: #333;
+}
+
+/* Suggestions Dropdown */
+.suggestions-list {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.suggestion-item {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Spinner */
+#spinner {
+    margin-top: 20px;
+}
+
+.spinner-border {
+    width: 50px;
+    height: 50px;
+}
+
+/* Search Results */
+.search-results {
+    width: 80%;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+.result-item {
+    background-color: white;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.result-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.result-title {
+    font-size: 1.2rem;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.result-url {
+    font-size: 0.9rem;
+    color: #28a745;
+    text-decoration: none;
+    word-break: break-all;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.result-url:hover {
+    text-decoration: underline;
+}
+
+.result-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Dark Mode (Optional Feature) */
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .search-input {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #495057;
+}
+
+body.dark-mode .search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+body.dark-mode .suggestions-list {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode .suggestion-item:hover {
+    background-color: #495057;
+}
+
+#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ensures the spinner is on top of other elements */
+}
+
+body.dark-mode .result-item {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #495057;
+}
+
+body.dark-mode .result-title {
+    color: #007bff;
+}
+
+body.dark-mode .result-url {
+    color: #28a745;
+}
+
+body.dark-mode .error-message {
+    color: #f03e3e;
+}

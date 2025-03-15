@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wikipedia Search Application">
+    <title>Wikipedia Search</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="wiki-search-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo" class="wiki-logo">
+            <h1 class="display-4">Wikipedia Search</h1>
+            <p class="lead">Search the world's largest online encyclopedia.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Type to search Wikipedia..." autocomplete="off">
+            <button id="clearButton" title="Clear search">&#x2715;</button>
+            <div id="suggestions" class="suggestions-list"></div>
+        </div>
+
+        <!-- Spinner (Hidden by Default) -->
+        <div id="spinner" class="spinner-border d-none" role="status">
+
+        </div>
+
+        <!-- Search Results -->
+        <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
